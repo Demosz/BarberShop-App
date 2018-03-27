@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Barbershop App</title>
+<script type="text/javascript" src="js/vendor/angular.min.js"></script>
+</head>
+<body ng-app="BarbershopApp" ng-controller="HomeController">
+<h1> {{ welcome }} </h1>
+<h1> {{ counter.shop_counter }} </h1>
+<h1>Today's date and time is {{ date | date:'medium' }}</h1>
+<h1>This counter was last updated at {{ counter.shop_update_time | date:'medium' }}</h1>
+<form ng-submit="addUpdate()" style="margin-top: 50px">
+    <h3> Help your fellow Marines! </h3>
+    <div class="form-group">
+    <input type="text" class="form-control" placeholder="Current count?" ng-model="update"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Update!</button>
+    </form>
+
+ 
+<!-- Modules -->
+<script type="text/javascript" src="js/app.js"></script>
+ 
+<!-- Controllers -->
+<script type="text/javascript" src="js/controllers/HomeController.js"></script>
+ 
+<!-- Services -->
+<script type="text/javascript" src="js/services/Counter.js"></script>
+</body>
+</html>
