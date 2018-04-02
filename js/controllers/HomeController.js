@@ -13,9 +13,9 @@ app.controller('HomeController', [
     $scope.date = new Date();
 
     $scope.addUpdate = function() {
- 
+
         //if input empty, don't submit
-        if(!$scope.update || $scope.update === "") {
+        if(!$scope.update || $scope.update === "" || !parseInt($scope.update) == 'number') {
         return;
         }
 
